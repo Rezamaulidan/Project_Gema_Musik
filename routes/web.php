@@ -9,3 +9,6 @@ Route::get('/', function () {
 Route::get('/beranda', function () {
     return view('beranda');
 });
+
+use App\Http\Controllers\HomeController;
+Route::get('/', [HomeController::class, 'index']);
