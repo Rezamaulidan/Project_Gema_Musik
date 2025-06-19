@@ -11,9 +11,9 @@ class PendaftaranController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function showForm()
+    public function showinputKode()
     {
-        return view('form_pendaftaran');
+        return view('input_kode');
     }
 
     // /**

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PendaftaranController;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,4 +12,6 @@ Route::get('/', function () {
 //     return view('form_pendaftaran');
 // });
 
-Route::get('/pendaftaran', [PendaftaranController::class, 'showForm'])->name('pendaftaran.form');
+Route::get('/beranda', [HomeController::class, 'index']);
+
+Route::get('/input_kode', [PendaftaranController::class, 'showinputKode'])->name('input_kode.form');
