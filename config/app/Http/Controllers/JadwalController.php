@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Jadwal;
 use Illuminate\Http\Request;
 
 class JadwalController extends Controller
 {
+    // Tampilkan halaman jadwal kelas musik
     public function index()
     {
-      $jadwals = Jadwal::all();
-        return view('jadwal', compact('jadwals'));
+        // Misalnya ambil data jadwal dari database nanti
+        return view('jadwal');
     }
 }
