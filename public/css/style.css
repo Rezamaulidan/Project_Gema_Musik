@@ -1,4 +1,79 @@
 body {
+    background: 
+        linear-gradient(135deg, #00268d 0%, #feffff 100%),
+        url('../images/bg-login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.navbar-custom {
+    background-color: #0c0058;
+}
+
+.btn-yellow {
+    background-color: #ffca28;
+    color: #fbfdff;
+    font-weight: bold;
+    border: none;
+   
+}
+
+.btn-yellow:hover {
+    background-color: #ffd95b;
+    color: #e8ecf3;
+}
+
+.card {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(13, 71, 161, 0.2);
+    background: rgba(227,240,255,0.95); /* Ubah dari rgba(255,255,255,0.95) */
+    color: #0c0058; /* Ubah warna teks agar kontras */
+}
+
+.card-header {
+    background-color: #f4f7fb; /* Ubah dari #e5ebf1 */
+    color: #0c0058; /* Ubah warna teks agar kontras */
+    border-bottom: none;
+    border-radius: 16px 16px 0 0;
+}
+
+.btn-primary {
+    background-color: #edf0f4; /* Ubah dari #e2e9f0 */
+    border: none;
+    color: #0c0058; /* Ubah warna teks agar kontras */
+}
+
+.btn-primary:hover {
+    background-color: #f4f7fa; /* Ubah dari #ecf2fb */
+    color: #0c0058;
+}
+
+.hero {
+    text-align: center;
+    color: #f3f2f2;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.gallery img {
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(13,71,161,0.15);
+    object-fit: cover;
+}
+
+{
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #fff;
