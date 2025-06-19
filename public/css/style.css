@@ -1,3 +1,307 @@
+/* Reset Umum */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5; /* Latar belakang abu-abu muda */
+    color: #333;
+    min-height: 100vh; /* Pastikan body mengambil tinggi viewport penuh */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Diperlukan untuk posisi absolut latar belakang not musik */
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+/* Latar Belakang Not Musik - Anda akan mengganti 'jalur/ke/gambar-not-musik-anda.png' */
+body::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Sesuaikan sesuai kebutuhan */
+    height: 60%; /* Sesuaikan sesuai kebutuhan untuk menampilkan not */
+    background-image: url("jalur/ke/gambar-not-musik-anda.png"); /* GANTI JALUR INI */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain; /* Atau 'auto' atau dimensi tertentu */
+    opacity: 0.1; /* Buat samar seperti di gambar */
+    z-index: -1; /* Kirim ke belakang konten lain */
+}
+
+/* Gaya Header */
+.main-header {
+    background-color: #1a237e; /* Biru tua */
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-placeholder {
+    width: 40px; /* Sesuaikan ukuran sesuai kebutuhan */
+    height: 40px;
+    margin-right: 10px;
+    background-color: #e0f2f7; /* Warna placeholder, ganti dengan logo Anda */
+    border-radius: 50%; /* Jika logo Anda bulat */
+}
+
+.main-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.user-icon {
+    font-size: 30px;
+    color: white;
+    /* Jika menggunakan Font Awesome: font-size: 30px; */
+}
+
+/* Gaya Navigasi */
+.main-nav {
+    background-color: #283593; /* Biru tua sedikit lebih terang untuk navigasi */
+    padding: 10px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Jarak antar item navigasi */
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 0;
+    display: block;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: #ffe082; /* Kuning lebih terang saat hover */
+}
+
+.main-nav ul li.active a {
+    color: #ffb300; /* Oranye/kuning untuk tautan aktif */
+    border-bottom: 2px solid #ffb300;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.arrow-down {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0.7em;
+    vertical-align: middle;
+    /* Untuk panah yang lebih visual: content: '\25BC'; Unicode untuk segitiga hitam menunjuk ke bawah */
+}
+
+/* Gaya Konten Utama */
+.main-content {
+    flex-grow: 1; /* Memungkinkan konten mengambil ruang yang tersedia */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.payment-box {
+    background-color: #e0e0e0; /* Abu-abu muda */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Lebar maksimal untuk kotak */
+}
+
+.payment-box h2 {
+    color: #424242;
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.payment-box input[type="text"] {
+    width: calc(
+        100% - 20px
+    ); /* Sesuaikan lebar dengan mempertimbangkan padding */
+    padding: 12px 10px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.payment-box input[type="text"]:focus {
+    border-color: #283593; /* Border biru tua saat fokus */
+}
+
+.payment-box button {
+    background-color: #283593; /* Tombol biru tua */
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.payment-box button:hover {
+    background-color: #1a237e; /* Biru lebih gelap saat hover */
+    transform: translateY(-2px);
+}
+
+/* Gaya Footer */
+.main-footer {
+    background-color: #1a237e; /* Biru tua */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: auto; /* Mendorong footer ke bagian bawah */
+}
+
+/* Penyesuaian Responsif (Opsional) */
+@media (max-width: 768px) {
+    .main-header {
+        padding: 10px 15px;
+    }
+
+    .main-header h1 {
+        font-size: 20px;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .payment-box {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li.active a {
+        border-bottom: none; /* Hapus border untuk item yang bertumpuk */
+    }
+}
+
+/* Gaya Navigasi Umum */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Untuk menata menu utama secara horizontal */
+}
+
+.main-nav ul li {
+    position: relative; /* Penting untuk posisi absolut sub-menu */
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap; /* Mencegah teks menu pecah baris */
+}
+
+.main-nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Gaya Panah */
+.arrow-down::after {
+    content: "\25BC"; /* Panah ke bawah */
+    font-size: 0.7em;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.arrow-right::after {
+    content: "\25B6"; /* Panah ke kanan */
+    font-size: 0.7em;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+/* Gaya Sub-menu (Sembunyikan secara default) */
+.submenu,
+.sub-submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%; /* Tempatkan sub-menu tepat di bawah item induk */
+    left: 0;
+    background-color: #444; /* Warna latar belakang sub-menu */
+    min-width: 180px; /* Lebar minimum sub-menu */
+    z-index: 1000; /* Pastikan sub-menu muncul di atas konten lain */
+
+    /* Sembunyikan secara default */
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease; /* Transisi halus */
+}
+
+/* Gaya Sub-sub-menu (untuk menu multi-level) */
+.dropdown-submenu .sub-submenu {
+    top: 0; /* Tempatkan sub-sub-menu sejajar dengan item induk */
+    left: 100%; /* Tempatkan sub-sub-menu di sebelah kanan item induk */
+}
+
+/* Tampilkan sub-menu saat hover pada item dropdown */
+.dropdown:hover > .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Tampilkan sub-sub-menu saat hover pada item dropdown-submenu */
+.dropdown-submenu:hover > .sub-submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Gaya item sub-menu */
+.submenu li a,
+.sub-submenu li a {
+    padding: 10px 20px;
+    color: white;
+    background-color: #444;
+}
+
+.submenu li a:hover,
+.sub-submenu li a:hover {
+    background-color: #666;
+=======
 body {
     background: 
         linear-gradient(135deg, #00268d 0%, #feffff 100%),
