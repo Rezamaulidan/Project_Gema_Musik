@@ -1,0 +1,314 @@
+
+/* RESET & BODY */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #2e2a79;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+}
+
+.logo-img {
+  height: 32px;
+  width: auto;
+  max-width: 40px;
+  object-fit: contain;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: normal;
+}
+
+.menu li a.active {
+  color: inherit;
+  font-weight: normal; 
+}
+
+
+.icon-user {
+  font-size: 20px;
+}
+
+/* INFO BAR */
+.jadwal-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  font-size: 14px;
+  font-weight: normal;
+  color: #333;
+}
+
+/* TABEL JADWAL */
+.jadwal-container {
+  padding: 0 40px 40px;
+}
+
+.jadwal-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.jadwal-table th {
+  background-color: #2e2a79; 
+  color: white;
+  padding: 12px;
+  font-weight: normal;
+}
+
+.jadwal-table td {
+  border: 1px solid #ccc;
+  padding: 14px;
+  font-size: 14px;
+  background-color: #f5f5f5; 
+  color: black; 
+}
+
+.jadwal-table .instrumen {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+.wrapper {
+  flex: 1;
+}
+/* FOOTER */
+footer {
+  background-color: #2e2a79;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+/* Halaman Profil */
+
+.profil-wrapper {
+  padding: 40px;
+  background-color: #f5f5f5;
+  color: black;
+}
+
+.judul-halaman {
+  text-align: center;
+  color: #2e2a79;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.profil-box {
+  display: flex;
+  gap: 40px;
+  background-color: #bdbdbd;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.profil-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.foto-profil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  background-image: url('../images/user-icon.svg');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.profil-label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.profil-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-profil {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.tombol-edit {
+  background-color: #f4b400;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: start;
+}
+/* Halaman Profil */
+
+.profil-wrapper {
+  padding: 40px;
+  background-color: #f5f5f5;
+  color: black;
+}
+
+.judul-halaman {
+  text-align: center;
+  color: #2e2a79;
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.profil-box-biru {
+  display: flex;
+  gap: 40px;
+  background-color: #2e2a79;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: auto;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.profil-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.foto-profil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: #e0e0e0;
+  border: 4px solid #f4b400;
+}
+
+.profil-username {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.profil-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.input-profil {
+  background-color: #e0e0e0;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #000;
+}
+
+.tombol-edit {
+  background-color: #f4b400;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: start;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper utama pakai flex column */
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Isi konten fleksibel (selain navbar & footer) */
+.profil-wrapper {
+  flex: 1;
+  padding: 40px;
+  background-color: #f5f5f5;
+}
+
+/* Footer tetap di bawah */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background-color: #2e2a79;
+  color: white;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+}
+
+.logo-img {
+  height: 32px;
+  width: auto;
+  max-width: 40px;
+  object-fit: contain;
+}
